@@ -2,7 +2,7 @@
   "name": "@ioankat/component",
   "version": "1.2.4",
   "description": "",
-  "main": "initHooks.js",
+  "main": "cli.js",
   "scope": "public",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +24,6 @@
     "yargs": "^17.0.1"
   },
   "bin": {
-    "hooks": "./bin/index.js"
+    "hooks": "./cli.js"
   }
 }

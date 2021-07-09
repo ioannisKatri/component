@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-const init = require("../initHooks.js");
+const init = require("../cli.js");
 init();
 
