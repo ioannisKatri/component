@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ioannisKatri/component#readme",
   "dependencies": {
     "boxen": "^5.0.1",
-    "chalk": "^4.1.1"
+    "chalk": "^4.1.1",
+    "fs-extra": "^10.0.0"
   }
 }
