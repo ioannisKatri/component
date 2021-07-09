@@ -17,7 +17,7 @@
     "url": "https://github.com/ioannisKatri/component/issues"
   },
   "homepage": "https://github.com/ioannisKatri/component#readme",
-  "devDependencies": {
+  "dependencies": {
     "boxen": "^5.0.1",
     "chalk": "^4.1.1"
   }
