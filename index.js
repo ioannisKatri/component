@@ -20,12 +20,10 @@ const message = (message, success) => {
 
 
 
-const path = `${__dirname}/hooks`
+const currentPath = `${__dirname}/hooks`
 const commands = "" +
     "git rev-parse --is-inside-work-tree &&" +
-    `git config --local core.hooksPath ${path}`
-
-// TODO check if folder exist /hooks
+    `git config --local core.hooksPath ${currentPath}`
 
 exec(commands, (err, stdout, stderr) => {
     if (err) {
@@ -38,18 +36,6 @@ exec(commands, (err, stdout, stderr) => {
         print(err.message)
         return;
     }
-
-    const srcDir = `path/to/file`;
-    const destDir = `path/to/destination/directory`;
-
-// To copy a folder or file
-    fs.copyFileSync(srcDir, destDir, function (err) {
-        if (err) {
-            console.error(err);
-        } else {
-            console.log("success!");
-        }
-    });
 
     message(`Git-Hooks are enabled`,true)
 });
