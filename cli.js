@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-const program = new Command()
-
-const {hooks} = require('./lib/hooks');
 const {Command} = require('commander');
 
+const {hooks} = require('./lib/hooks');
+
+const program = new Command()
 program
     .option('-i, --init', "Git hooks")
     .parse(process.argv);
