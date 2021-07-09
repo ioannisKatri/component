@@ -23,7 +23,7 @@ const message = (message, success) => {
 const path = `${__dirname}/hooks`
 const commands = "" +
     "git rev-parse --is-inside-work-tree &&" +
-    `git config --local core.hooksPath ${path}"`
+    `git config --local core.hooksPath ${path}`
 
 // TODO check if folder exist /hooks
 
