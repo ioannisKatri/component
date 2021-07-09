@@ -1,8 +1,9 @@
-const { exec } = require('child_process');
+const {exec} = require('child_process');
 const chalk = require("chalk");
 const boxen = require("boxen");
+const {Command} = require('commander');
 
-// eslint-disable-next-line no-undef
+
 const print = (message) => console.log(message);
 const message = (message, success) => {
     const greeting = chalk.white.bold(message);
@@ -14,10 +15,9 @@ const message = (message, success) => {
         backgroundColor: "#555555"
     };
 
-    const msgBox = boxen( greeting, boxenOptions );
+    const msgBox = boxen(greeting, boxenOptions);
     print(msgBox);
 }
-
 
 
 const currentPath = `${__dirname}/hooks`
@@ -25,17 +25,33 @@ const commands = "" +
     "git rev-parse --is-inside-work-tree &&" +
     `git config --local core.hooksPath ${currentPath}`
 
-exec(commands, (err, stdout, stderr) => {
-    if (err) {
-        if (stderr.indexOf('.git') >= 0) {
-            message("Git was not found locally", false)
+
+const init = function () {
+    print("Initializing procedure....")
+    exec(commands, (err, stdout, stderr) => {
+        if (err) {
+            if (stderr.indexOf('.git') >= 0) {
+                message("Git was not found locally", false)
+                return;
+            }
+
+            message(`Unexpected Error`, false)
+            print(err.message)
             return;
         }
 
-        message(`Unexpected Error`,false)
-        print(err.message)
-        return;
-    }
+        message(`Git-Hooks are enabled`, true)
+    });
+}
 
-    message(`Git-Hooks are enabled`,true)
-});
+const program = new Command()
+
+program
+    .option('-i, --init', 'some desc')
+    .parse(process.argv);
+
+const options = program.opts();
+
+if (options.init) {
+    init()
+}
