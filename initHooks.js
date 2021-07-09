@@ -26,7 +26,7 @@ const commands = "" +
     `git config --local core.hooksPath ${currentPath}`
 
 
-const init = function () {
+const initHooks = function () {
     print("Initializing procedure....")
     exec(commands, (err, stdout, stderr) => {
         if (err) {
@@ -44,14 +44,16 @@ const init = function () {
     });
 }
 
-const program = new Command()
+module.exports = function() {
+    const program = new Command()
 
-program
-    .option('-i, --init', 'some desc')
-    .parse(process.argv);
+    program
+        .option('-i, --init', 'some desc')
+        .parse(process.argv);
 
-const options = program.opts();
+    const options = program.opts();
 
-if (options.init) {
-    init()
+    if (options.init) {
+        initHooks()
+    }
 }

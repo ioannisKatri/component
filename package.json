@@ -2,7 +2,7 @@
   "name": "@ioankat/component",
   "version": "1.2.2",
   "description": "",
-  "main": "index.js",
+  "main": "initHooks.js",
   "scope": "public",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,6 +20,10 @@
   "dependencies": {
     "boxen": "^5.0.1",
     "chalk": "^4.1.1",
-    "commander": "^8.0.0"
+    "commander": "^8.0.0",
+    "yargs": "^17.0.1"
+  },
+  "bin": {
+    "hooks": "./bin/index.js"
   }
 }
