@@ -1,7 +1,6 @@
 const { exec } = require('child_process');
 const chalk = require("chalk");
 const boxen = require("boxen");
-const fs = require('fs-extra');
 
 // eslint-disable-next-line no-undef
 const print = (message) => console.log(message);
