@@ -1,0 +1,20 @@
+{
+  "name": "@ion-kat/component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scope": "public",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioannisKatri/component.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ioannisKatri/component/issues"
+  },
+  "homepage": "https://github.com/ioannisKatri/component#readme"
+}
