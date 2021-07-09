@@ -1,5 +1,5 @@
 {
-  "name": "@ion-kat/component",
+  "name": "@ioankat/component",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,10 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/ioannisKatri/component.git"
   },
-  "author": "",
+  "author": "ioankat",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ioannisKatri/component/issues"
   },
-  "homepage": "https://github.com/ioannisKatri/component#readme"
+  "homepage": "https://github.com/ioannisKatri/component#readme",
+  "devDependencies": {
+    "boxen": "^5.0.1",
+    "chalk": "^4.1.1"
+  }
 }
