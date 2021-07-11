@@ -1,6 +1,6 @@
 {
   "name": "@ioankat/component",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "",
   "main": "index.js",
   "scope": "public",
@@ -20,7 +20,7 @@
   "bin": {
     "hooks": "index.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "boxen": "^5.0.1",
     "chalk": "^4.1.1",
     "commander": "^8.0.0",
