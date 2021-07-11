@@ -15,7 +15,7 @@ fi
 
 # grep -E is used for regular expression
 # wc command counts characters
-BRANCH_NAME_LENGTH=`git rev-parse --abbrev-ref HEAD | grep -E '^(feature|bug|refactor)\/IU-[0-9]{2,10}\/[A-Za-z0-9_-]*' | wc -c`
+BRANCH_NAME_LENGTH=`$BRANCH_NAME | grep -E '^(feature|bug|refactor)\/IU-[0-9]{2,10}\/[A-Za-z0-9_-]*' | wc -c`
 
 # if the branch name does not match with the regex it will output nothing so the wc -c will be equal to 0
 if [ ${BRANCH_NAME_LENGTH} -eq 0 ] ; then
