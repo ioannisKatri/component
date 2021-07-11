@@ -8,6 +8,12 @@ RED="\e[31m"
 
 # git rev-parse --abbrev-ref HEAD -> allow us to get the branch name
 # grep -E is used for regular expression
+BRANCH_NAME = git rev-parse --abbrev-ref HEAD
+
+if [ ${BRANCH_NAME} -eq 'main' |   ${BRANCH_NAME} -eq 'master'] ; then
+  exit 0;
+fi
+
 # wc command counts characters
 BRANCH_NAME_LENGTH=`git rev-parse --abbrev-ref HEAD | grep -E '^(feature|bug|refactor)\/IU-[0-9]{2,10}\/[A-Za-z0-9_-]*' | wc -c`
 

@@ -2,7 +2,7 @@
   "name": "@ioankat/component",
   "version": "1.2.7",
   "description": "",
-  "main": "cli.js",
+  "main": "index.js",
   "scope": "public",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,13 +17,13 @@
     "url": "https://github.com/ioannisKatri/component/issues"
   },
   "homepage": "https://github.com/ioannisKatri/component#readme",
-  "dependencies": {
+  "bin": {
+    "hooks": "index.js"
+  },
+  "devDependencies": {
     "boxen": "^5.0.1",
     "chalk": "^4.1.1",
     "commander": "^8.0.0",
     "yargs": "^17.0.1"
-  },
-  "bin": {
-    "hooks": "./cli.js"
   }
 }
