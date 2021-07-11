@@ -1,19 +1,19 @@
 #!/bin/bash
 #
 # Pre-push hook
-# Check if branch name follows a specfic structure.
+# Check if branch name follows a specific structure.
 
 # Colour
 RED="\e[31m"
 
 # git rev-parse --abbrev-ref HEAD -> allow us to get the branch name
-# grep -E is used for regular expression
 BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
-printf "branch name -> ${BRANCH_NAME} \n"
+
 if [ ${BRANCH_NAME} = "master" ] | [ ${BRANCH_NAME} = "main" ] ; then
   exit 0;
 fi
 
+# grep -E is used for regular expression
 # wc command counts characters
 BRANCH_NAME_LENGTH=`git rev-parse --abbrev-ref HEAD | grep -E '^(feature|bug|refactor)\/IU-[0-9]{2,10}\/[A-Za-z0-9_-]*' | wc -c`
 
