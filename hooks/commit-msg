@@ -13,13 +13,6 @@ INPUT_FILE=$1
 #head -n1 will provide a trailing newline only if the input has one.
 START_LINE=`head -n1 $INPUT_FILE`
 echo $START_LINE
-#Regex for update npm package
-NPM_PATTERN="([0-9].)([0-9].)([0-9])$"
-
-echo "11"
-if ! [[ "$START_LINE" =~ $NPM_PATTERN ]]; then
-  exit 0;
-fi
 
 #Regex for specific commit
 PATTERN="IU-[0-9]{2,10}: [ A-Za-z0-9_.,-]*"
