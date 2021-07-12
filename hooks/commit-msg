@@ -14,10 +14,9 @@ INPUT_FILE=$1
 START_LINE=`head -n1 $INPUT_FILE`
 echo $START_LINE
 #Regex for update npm package
-NPM_PATTERN="([0-9].)([0-9].)([0-9])"
+NPM_PATTERN="([0-9].)([0-9].)([0-9])$"
 
 if ! [[ "$START_LINE" =~ $NPM_PATTERN ]]; then
-  echo"aaaa"
   exit 0;
 fi
 
