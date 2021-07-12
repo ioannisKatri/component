@@ -12,4 +12,4 @@ const options = program.opts();
 
 if (options.init) {
     hooks();
-}
+};
